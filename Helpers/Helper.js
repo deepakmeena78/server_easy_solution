@@ -7,7 +7,7 @@ export class Helpers {
             host: process.env.EMAIL_HOST || "smtp.gmail.com",
             auth: {
                 user: process.env.ADMIN_EMAIL || 'deepakmeenaa78@gmail.com',
-                pass: process.env.EMAIL_APP_PASSWOD || 'cjys vcpn jptc olqe',
+                pass: process.env.EMAIL_APP_PASSWOD || 'qroe gkeg bhci ekyw',
             },
             secure: true,
         });

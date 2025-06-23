@@ -9,6 +9,7 @@ import connectDB from "./db/db.config.js";
 import DashboardRoute from "./routes/Frontend/DashBoard.routes.js";
 import ContactRoute from "./routes/Frontend/Contact.routes.js";
 import http from "http";
+import 'dotenv/config'
 
 const app = express();
 import socketHandler from "./Helpers/Chatbot.js";
