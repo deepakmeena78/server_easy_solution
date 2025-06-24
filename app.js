@@ -8,6 +8,7 @@ import Review from "./routes/Frontend/Review.routes.js";
 import connectDB from "./db/db.config.js";
 import DashboardRoute from "./routes/Frontend/DashBoard.routes.js";
 import ContactRoute from "./routes/Frontend/Contact.routes.js";
+import serverless from "serverless-http";
 import 'dotenv/config'
 
 const app = express();
@@ -28,7 +29,8 @@ app.use("/review", Review);
 app.use("/dashboard", DashboardRoute);
 app.use("/contact", ContactRoute);
 
-const Port = process.env.PORT || 3200;
-app.listen(Port, () => {
-  console.log("Server Started" + Port);
-});
+// const Port = process.env.PORT || 3200;
+// app.listen(Port, () => {
+//   console.log("Server Started" + Port);
+// });
+export const handler = serverless(app);
