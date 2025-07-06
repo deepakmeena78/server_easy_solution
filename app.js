@@ -1,13 +1,13 @@
 import express from "express";
-import CustomerRoute from "../routes/Frontend/Customer.routes.js";
-import AdminRoute from "../routes/Backend/admin.routes.js";
-import HelpRoute from "../routes/Frontend/Help.routes.js";
-import HelpProvider from "../routes/Frontend/HelpProvider.routes.js";
-import CategoryRoute from "../routes/Backend/Category.routes.js";
-import Review from "../routes/Frontend/Review.routes.js";
-import connectDB from "../db/db.config.js";
-import DashboardRoute from "../routes/Frontend/DashBoard.routes.js";
-import ContactRoute from "../routes/Frontend/Contact.routes.js";
+import CustomerRoute from "./routes/Frontend/Customer.routes.js";
+import AdminRoute from "./routes/Backend/admin.routes.js";
+import HelpRoute from "./routes/Frontend/Help.routes.js";
+import HelpProvider from "./routes/Frontend/HelpProvider.routes.js";
+import CategoryRoute from "./routes/Backend/Category.routes.js";
+import Review from "./routes/Frontend/Review.routes.js";
+import connectDB from "./db/db.config.js";
+import DashboardRoute from "./routes/Frontend/DashBoard.routes.js";
+import ContactRoute from "./routes/Frontend/Contact.routes.js";
 import 'dotenv/config'
 
 const app = express();
