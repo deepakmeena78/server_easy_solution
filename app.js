@@ -8,16 +8,13 @@ import Review from "../routes/Frontend/Review.routes.js";
 import connectDB from "../db/db.config.js";
 import DashboardRoute from "../routes/Frontend/DashBoard.routes.js";
 import ContactRoute from "../routes/Frontend/Contact.routes.js";
-import serverless from "serverless-http";
 import 'dotenv/config'
 
 const app = express();
 connectDB();
 
 import cors from "cors";
-app.use(cors({
-  origin:['http://localhost:3000','https://easy-solution-frontend.vercel.app']
-}));
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -32,4 +29,7 @@ app.use("/review", Review);
 app.use("/dashboard", DashboardRoute);
 app.use("/contact", ContactRoute);
 
-export default serverless(app);
+const Port = process.env.PORT || 3200;
+app.listen(Port, () => {
+  console.log("Server Started" + Port);
+});
